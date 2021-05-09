@@ -46,16 +46,16 @@ namespace WpfCustomControlLibrary
 
             FrameTest text = new FrameTest(TextUnder);
             Canvas.SetTop(text, image.Height);
-            Canvas.SetLeft(text, 20);
+            Canvas.SetLeft(text, image.Width/2);
             this.Children.Add(text);
 
-            Border border = new Border();
-            border.CornerRadius = new CornerRadius(5);
-            border.BorderBrush = Brushes.Red;
-            border.BorderThickness = new Thickness(3);
-            border.Width = 50;
-            border.Height = image.Height + text.Height;
-            this.Children.Add(border);
+            //Border border = new Border();
+            //border.CornerRadius = new CornerRadius(5);
+            //border.BorderBrush = Brushes.Red;
+            //border.BorderThickness = new Thickness(3);
+            //border.Width = 50;
+            //border.Height = image.Height + text.Height;
+            //this.Children.Add(border);
 
 
 
@@ -72,5 +72,15 @@ namespace WpfCustomControlLibrary
             //btn.Height = 50;
             //this.Children.Add(btn);
         }
+
+        protected override void OnRender(System.Windows.Media.DrawingContext drawingContext)
+        {
+
+            Rect bounds = new Rect(0, 0, Width, Height);
+            Pen pen = new Pen(Brushes.Green, 4);
+            drawingContext.DrawRoundedRectangle(Brushes.Yellow, pen, bounds, 5, 5);
+
+        }
+
     }
 }
