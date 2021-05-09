@@ -27,7 +27,6 @@ namespace WpfCustomControlLibrary
         public ImageText(string ImageName, string TextUnder)
         {
             InitializeComponent();
-            //Height = 50;
             this.ImageName = ImageName;
             this.TextUnder = TextUnder;
 
@@ -61,7 +60,9 @@ namespace WpfCustomControlLibrary
 
 
             this.Height = image.Height + text.Height;
+            this.Width = image.Width;
 
+            Margin = new Thickness(10);
 
 
 

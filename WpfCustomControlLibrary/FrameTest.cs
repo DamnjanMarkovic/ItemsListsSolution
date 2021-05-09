@@ -15,7 +15,7 @@ namespace WpfCustomControlLibrary
         public string TextUnderImage { get; set; }
         public FrameTest(string someText)
         {
-            Height = 50;
+            Height = 20;
             TextUnderImage = someText;
         }
 
@@ -23,7 +23,7 @@ namespace WpfCustomControlLibrary
         {
 
             Typeface Typeface1 = new Typeface(new FontFamily("Century"), FontStyles.Normal, FontWeights.Bold, FontStretches.Normal);
-            FormattedText ft = new FormattedText(TextUnderImage, CultureInfo.CurrentCulture, FlowDirection.LeftToRight, Typeface1, 22, Brushes.Red, 1.0);
+            FormattedText ft = new FormattedText(TextUnderImage, CultureInfo.CurrentCulture, FlowDirection.LeftToRight, Typeface1, 18, Brushes.Red, 1.0);
             drawingContext.DrawText(ft, new Point(0, 0));
 
         }

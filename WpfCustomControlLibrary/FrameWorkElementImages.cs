@@ -17,17 +17,19 @@ namespace WpfCustomControlLibrary
 
         public FrameWorkElementImages(string imageName)
         {
-            Height = 50;
 
             var imageLocation = $"pack://application:,,,/Resources/{imageName}";
             this.imageSource = new BitmapImage(new Uri(imageLocation, UriKind.Absolute));
+
+            Height = this.imageSource.Height;
+            Width = this.imageSource.Width;
 
         }
 
         protected override void OnRender(System.Windows.Media.DrawingContext drawingContext)
         {
 
-            Rect bounds = new Rect(0, 0, 50, 50);
+            Rect bounds = new Rect(0, 0, Width, Height);
             drawingContext.DrawImage(this.imageSource, bounds);
 
         }
