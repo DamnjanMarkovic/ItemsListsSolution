@@ -15,6 +15,7 @@ namespace WpfCustomControlLibrary
         public string TextUnderImage { get; set; }
         public FrameTest(string someText)
         {
+            Height = 50;
             TextUnderImage = someText;
         }
 

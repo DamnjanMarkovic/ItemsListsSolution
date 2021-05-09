@@ -27,7 +27,19 @@ namespace WpfCustomControlLibrary
             SetUsersIntoPanel();
             SetFrameTest();
             SetImageIntoPanel();
+            SetImageText();
 
+        }
+
+        private void SetImageText()
+        {
+            List<ImageText> items = new List<ImageText>();
+            items.Add(new ImageText("rejected.png", "1"));
+            items.Add(new ImageText("Selected.png", "2"));
+            items.Add(new ImageText("Stitched.png", "3"));
+            items.Add(new ImageText("Stored.png", "4"));
+            items.Add(new ImageText("Storing.png", "5"));
+            listImageText.ItemsSource = items;
         }
 
         private void SetImageIntoPanel()
@@ -41,11 +53,11 @@ namespace WpfCustomControlLibrary
             listImages.ItemsSource = items;
 
             List<FrameWorkElementImages> itemsImagesFramework = new List<FrameWorkElementImages>();
-            itemsImagesFramework.Add(new FrameWorkElementImages("rejected.png") { Height = 50 });
-            itemsImagesFramework.Add(new FrameWorkElementImages("Selected.png") { Height = 50 });
-            itemsImagesFramework.Add(new FrameWorkElementImages("Stitched.png") { Height = 50 });
-            itemsImagesFramework.Add(new FrameWorkElementImages("Stored.png") { Height = 50 });
-            itemsImagesFramework.Add(new FrameWorkElementImages("Storing.png") { Height = 50 });
+            itemsImagesFramework.Add(new FrameWorkElementImages("rejected.png") );
+            itemsImagesFramework.Add(new FrameWorkElementImages("Selected.png") );
+            itemsImagesFramework.Add(new FrameWorkElementImages("Stitched.png") );
+            itemsImagesFramework.Add(new FrameWorkElementImages("Stored.png") );
+            itemsImagesFramework.Add(new FrameWorkElementImages("Storing.png") );
             listFrameWorkImages.ItemsSource = itemsImagesFramework;
 
 
@@ -64,12 +76,12 @@ namespace WpfCustomControlLibrary
         private void SetFrameTest()
         {
             List<FrameTest> items = new List<FrameTest>();
-            items.Add(new FrameTest("1") {   Height = 50 });
-            items.Add(new FrameTest("2") {   Height = 50 });
-            items.Add(new FrameTest("3") {   Height = 50 });
-            items.Add(new FrameTest("4") {   Height = 50 });
-            items.Add(new FrameTest("5") {  Height = 50 });
-            items.Add(new FrameTest("6") {  Height = 50 });
+            items.Add(new FrameTest("1") );
+            items.Add(new FrameTest("2") );
+            items.Add(new FrameTest("3") );
+            items.Add(new FrameTest("4") );
+            items.Add(new FrameTest("5") );
+            items.Add(new FrameTest("6") );
             listFrameText.ItemsSource = items;
         }
 

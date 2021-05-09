@@ -48,6 +48,10 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="ImageText.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ItemsListTest_01.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -60,6 +64,9 @@
   <ItemGroup>
     <Compile Include="FrameTest.cs" />
     <Compile Include="FrameWorkElementImages.cs" />
+    <Compile Include="ImageText.xaml.cs">
+      <DependentUpon>ImageText.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ItemsListTest_01.xaml.cs">
       <DependentUpon>ItemsListTest_01.xaml</DependentUpon>
     </Compile>

@@ -17,6 +17,7 @@ namespace WpfCustomControlLibrary
 
         public FrameWorkElementImages(string imageName)
         {
+            Height = 50;
 
             var imageLocation = $"pack://application:,,,/Resources/{imageName}";
             this.imageSource = new BitmapImage(new Uri(imageLocation, UriKind.Absolute));
