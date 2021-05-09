@@ -108,7 +108,7 @@ namespace WpfCustomControlLibrary
             Geometry ImagePawn = Geometry.Parse(ImagePawnString);
 
 
-            Rect boundsGeometry = new Rect(100, 100, 80, 80);
+            //Rect boundsGeometry = new Rect(100, 100, 80, 80);
             Pen penGeometry = new Pen(Brushes.Orange, 2);
             drawingContext.DrawGeometry(Brushes.Pink, pen, ImagePawn);
 

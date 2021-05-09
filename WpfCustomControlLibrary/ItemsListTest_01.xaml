@@ -6,11 +6,21 @@
              xmlns:local="clr-namespace:WpfCustomControlLibrary"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="1000">
-    
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+ 
     
 
-        <Grid>
-            <Grid.ColumnDefinitions>
+        <Grid Grid.Row="0">
+
+        
+        <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -27,5 +37,9 @@
         <ListView Margin="10" Name="listFrameText" Grid.Column="4"  />
 
         <ListView Margin="10" Name="listImageText" Grid.Column="5" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <local:GlyphTest_01/>
+        </Grid>
     </Grid>
 </UserControl>
